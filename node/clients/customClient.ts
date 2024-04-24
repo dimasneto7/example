@@ -14,6 +14,6 @@ export default class CustomClient extends ExternalClient {
   }
 
   public async getCustomer(email: string) {
-    return await this.http.get(`/api/dataentities/CL/search?_fields=email,firstName,gender&_where=${email}`)
+    return await this.http.get(`/api/dataentities/CL/search?_fields=email,firstName,gender&_where=email${email}`)
   }
 }
